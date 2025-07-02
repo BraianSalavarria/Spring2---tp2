@@ -28,12 +28,12 @@ const superHero = mongoose.model('SuperHeroes',superHeroeSchema);
 
 async function insertSuperHero() {
     const hero = new superHero({
-        nombreSuperHeroe: 'Spiderman',
+        nombreSuperHeroe: 'Spiderman23',
         nombreReal: 'Peter Parker',
         edad: 25,
         planetaOrigen: 'Tierra',
-        debilidad: 'Radioctiva',
-        poderes: ['Trepar Paredes','Sentido Arácnido', 'Super Fuerza', 'Agilidad,'],
+        debilidad: ['Radioctiva'],
+        poderes: ['Trepar Paredes','Sentido Arácnido', 'Super Fuerza', 'Agilidad'],
         aliados: ['Iron Man'],
         enemigos: ['Duene Verde'],
         creador: 'Martin'
@@ -65,11 +65,11 @@ async function deleteSuperHero(nombreSuperHeroe) {
 
 async function findSuperHero() {
 
-    const result = superHero.find({ planetaOrigen: 'Tierra' });
+    const result = await superHero.find({ planetaOrigen: 'Tierra' });
     console.log("Superheroes Encontrados", result);
 }
 
 insertSuperHero();
 updateSuperHero('Spiderman');
 findSuperHero();
-deleteSuperHero('Spiderman')
+//deleteSuperHero('Spiderman')
