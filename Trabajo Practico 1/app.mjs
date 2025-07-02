@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-mongoose.connect("mongodb+srv://Grupo-16:grupo16@cursadanodejs.ls9ii.mongodb.net/Node-js")
+mongoose.connect("mongodb+srv://Grupo-17:grupo17@cursadanodejs.ls9ii.mongodb.net/Node-js")
 .then(()=>{
     console.log("Coneccion Exitosa");
 })
@@ -21,7 +21,7 @@ const superHeroeSchema = new mongoose.Schema(
         createdAt: {type: Date, default: Date.now},
         creador: String,
     },
-    {collection:"Grupo-16"}
+    {collection:"Grupo-17"}
 );
 
 const superHero = mongoose.model('SuperHeroes',superHeroeSchema);
